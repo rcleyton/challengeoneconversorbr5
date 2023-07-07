@@ -1,0 +1,14 @@
+/bin/
+/target/
+/classes/
+*.class
+*.jar
+*.war
+*.ear
+/.classpath
+/.project
+/.settings/
+/lib/
+/logs/
+*.log
+*.properties
