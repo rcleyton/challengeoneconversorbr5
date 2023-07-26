@@ -1,17 +1,28 @@
 import javax.swing.JOptionPane;
 
 public class App {
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-    String[] typeConversion = {"Conversor de Moeda", "Conversor de Temperatura"};
+		UserInterface userInterface = new UserInterface();
+		ConvertCurrency convertCurrency = new ConvertCurrency();
 
-    String selectType = (String) JOptionPane.showInputDialog(null, 
-      "Escolha uma opção", 
-      "Menu", 
-      JOptionPane.QUESTION_MESSAGE,
-      null,
-      typeConversion,
-      typeConversion[0]
-    );
-  }
+		Object[] options = { "Sim", "Não" };
+		int opcao = 0;
+
+		while (opcao == 0 || opcao == -1) {
+
+			userInterface.selectType();
+
+			double inputValue = userInterface.inputValue();
+
+			String selectCurrency = userInterface.selectCurrency();
+
+			String result = convertCurrency.convert(inputValue, selectCurrency);
+
+			JOptionPane.showMessageDialog(null, result);
+
+			opcao = JOptionPane.showOptionDialog(null, "Deseja fazer nova conversão?", "Continuar...",
+					JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
+		}
+	}
 }
