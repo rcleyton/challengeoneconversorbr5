@@ -2,10 +2,11 @@ import javax.swing.JOptionPane;
 
 public class UserInterface {
 
-	public void selectType() {
+	public String selectType() {
 		String[] typeConversion = { "Conversor de Moeda", "Conversor de Temperatura" };
 		String selectType = (String) JOptionPane.showInputDialog(null, "Escolha uma opção", "Menu",
 				JOptionPane.QUESTION_MESSAGE, null, typeConversion, typeConversion[0]);
+		return selectType;
 	}
 
 	public double inputValue() {
@@ -31,6 +32,13 @@ public class UserInterface {
 		String selectCurrency = (String) JOptionPane.showInputDialog(null, "Escolha a moeda desejada para conversão",
 				"Moeda", JOptionPane.QUESTION_MESSAGE, null, currency, currency[0]);
 		return selectCurrency;
+	}
+	
+	public String selectTemperature() {
+		String[] temperature = { "Celsius para Fahrenheit", "Fahrenheit para Celsius" };
+		String selectTemperature = (String) JOptionPane.showInputDialog(null, "Escolha o tipo de temperatura desejada",
+				"Temperatura", JOptionPane.QUESTION_MESSAGE, null, temperature, temperature[0]);
+		return selectTemperature;
 	}
 
 }
