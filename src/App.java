@@ -24,5 +24,8 @@ public class App {
 			opcao = JOptionPane.showOptionDialog(null, "Deseja fazer nova conversão?", "Continuar...",
 					JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
 		}
+        if (opcao != JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(null, "Programa finalizado.", "Fim", JOptionPane.INFORMATION_MESSAGE);
+        }
 	}
 }

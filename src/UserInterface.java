@@ -25,9 +25,9 @@ public class UserInterface {
 	}
 
 	public String selectCurrency() {
-		String[] currency = { "Real para Dólar", "Real para Euro", "Real para Libras Esterlinas",
+		String[] currency = { "Real para Dólar", "Real para Euro", "Real para Libra Esterlina",
 				"Real para Peso Argentino", "Real para Peso Chileno", "Dólar para Real", "Euro para Real",
-				"Libras Esterlinas para Real", "Peso Argentino para Real", "Peso Chileno para Real" };
+				"Libra Esterlina para Real", "Peso Argentino para Real", "Peso Chileno para Real" };
 		String selectCurrency = (String) JOptionPane.showInputDialog(null, "Escolha a moeda desejada para conversão",
 				"Moeda", JOptionPane.QUESTION_MESSAGE, null, currency, currency[0]);
 		return selectCurrency;

@@ -42,7 +42,7 @@ public class ConvertCurrency {
 			value = value / brToClp;
 			break;
 		default:
-			System.out.println("Seleciona uma opção válida");
+			throw new IllegalArgumentException("Opção de moeda inválida: " + currency);
 		}
 
 		String numeroFormatado = formatResult.format(value);
